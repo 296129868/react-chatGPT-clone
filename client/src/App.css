@@ -3,12 +3,16 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --primary-bg-color: #282c34;
   --secondary-bg-color: #575969;
+  --text-primary:#202123;
+  --text-default:#353740;
+  --text-secondary:#6e6e80;
+
 }
 
 .App {
   font-family: var(--text-font);
   text-align: center;
-  background-color: var(--primary-bg-color);
+  /*background-color: var(--primary-bg-color);*/
   color: #fff;
   display: flex;
   position: absolute;
@@ -76,20 +80,23 @@ nav {
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 150px;
-  margin: 0;
+  margin: 0px 0px 0px 10px;
 }
 
 .navPrompt span {
   animation: fadeInChar 1s ease-in forwards;
   opacity: 0;
 }
-#botMessage pre {
+/*#botMessage pre {
   margin: 0;
   padding: 0;
   text-indent: 0;
   white-space: pre-wrap;
   position: relative;
-  top: -45px;
+  /* top: -45px;*/ 
+/*}*/
+#botMessage{
+ margin-left: 10px;
 }
 pre {
   font-family: var(--text-font);
@@ -138,10 +145,10 @@ nav svg {
 }
 .chatBox {
   flex: 1;
-  background-color: #353540;
+  /*background-color: #353540;*/
   position: relative;
   line-height: 24px;
-  color: #d1d5db;
+  color:var(--text-default);
   font-size: 16px;
 }
 #introsection::before,
@@ -163,6 +170,7 @@ nav svg {
   font-weight: 400;
 }
 #introsection ul {
+  margin-top:20px;
   list-style-type: square;
 }
 #introsection pre {
@@ -209,16 +217,22 @@ nav svg {
   /* align-items: center; */
   column-gap: 25px;
 }
-
+#chatPrompt{
+  margin-left:10px;
+}
 .userSVG {
   transform: scale(0.6);
+  color:#d9d9e3;
 }
 .botMessageMainContainer {
   width: 100%;
-  background-color: #444654;
+  --tw-bg-opacity:1;
+  /*background-color: #444654;*/
   position: relative;
+  background-color:rgba(247,247,248,var(--tw-bg-opacity))
 }
 .botMessageWrapper {
+  
   max-width: 800px;
   margin: auto;
   padding: 24px;
@@ -227,6 +241,7 @@ nav svg {
   justify-content: left;
   /* align-items: center; */
   column-gap: 25px;
+  
 }
 .stop-messgage {
   position: absolute;
@@ -283,28 +298,29 @@ nav svg {
   padding: 10px;
   flex: 1;
   resize: none;
-  background-color: #41414e;
-  color: #fff;
+  /*background-color: #41414e;*/
+  /*color: #fff;*/
   font-size: 16px;
   outline: none;
   border: none;
   overflow-y: hidden;
 }
 form button {
-  background: rgb(65, 65, 78);
+  /*background: rgb(65, 65, 78);*/
   border: none;
   position: absolute;
-  top: 20%;
+  top: 10%;
   right: 15px;
   width: 35px;
   height: 45px;
+  text-align:center;
 }
 
 @media (hover: hover) {
   button:hover {
     cursor: pointer;
-    background: #212023;
-    border-radius: 20%;
+    /*background: #acacbe;*/
+    border-radius: 30%;
   }
 }
 
@@ -343,7 +359,11 @@ form button {
   column-gap: 15px;
   margin-top: 20px;
 }
-
+.code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f1f1f1;
+  padding: 2px;
+}
 #loginButton {
   padding: 10px 25px;
   border-radius: 7px;
@@ -396,9 +416,11 @@ form button {
   }
   .userSVG {
     transform: scale(0.5);
+    color:#d9d9e3;
   }
   .openaiSVG {
     transform: scale(0.4);
+    color:#d9d9e3;
   }
   #avatar {
     width: 30px;
